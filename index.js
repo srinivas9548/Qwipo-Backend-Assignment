@@ -378,6 +378,16 @@ app.delete('/api/addresses/:addressId', (request, response) => {
     }
 });
 
+//Initial API
+app.get("/", async (request, response) => {
+    try {
+        response.send("Welcome!, This is a Qwipo Backend Assignment domain you can access with endpoints.");
+    } catch (e) {
+        console.error(e.message);
+        response.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
 // Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
