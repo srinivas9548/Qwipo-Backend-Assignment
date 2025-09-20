@@ -1,0 +1,67 @@
+// Customer Routes
+### Create a new customer
+POST http://localhost:5000/api/customers/
+Content-Type: application/json
+
+{
+    "first_name": "Vasu",
+    "last_name": "Vasamsetti",
+    "phone_number": "1234567886"
+}
+
+### Get a list of customers
+GET http://localhost:5000/api/customers
+
+###
+GET http://localhost:5000/api/customers?city=Mumbai
+
+###
+GET http://localhost:5000/api/customers?page=2&limit=5
+
+
+### Get a single customer by ID
+GET http://localhost:5000/api/customers/2
+
+### Update a customer
+PUT http://localhost:5000/api/customers/3
+Content-Type: application/json
+
+{
+    "first_name": "Sai Ram",
+    "last_name": "Dasu",
+    "phone_number": "9966776658"
+}
+
+### Delete a customer
+DELETE http://localhost:5000/api/customers/3
+
+###
+
+// Address Routes
+### Add a new address for a customer
+POST http://localhost:5000/api/customers/2/addresses
+Content-Type: application/json
+
+{
+  "address_details": "648 Main Street, Flat 10",
+  "city": "Bangalore",
+  "state": "Karnataka",
+  "pin_code": "560001"
+}
+
+### Get all addresses for a customer
+GET http://localhost:5000/api/customers/2/addresses
+
+### Update an address by ID
+PUT http://localhost:5000/api/addresses/2
+Content-Type: application/json
+
+{
+  "address_details": "456 Road, Apt 7",
+  "city": "Pune",
+  "state": "Maharashtra",
+  "pin_code": "411001"
+}
+
+### Delete an address
+DELETE http://localhost:5000/api/addresses/3
