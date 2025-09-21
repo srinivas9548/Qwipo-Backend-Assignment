@@ -5,8 +5,8 @@ Content-Type: application/json
 
 {
     "first_name": "Vasu",
-    "last_name": "Vasamsetti",
-    "phone_number": "1234567886"
+    "last_name": "Dev",
+    "phone_number": "9966885577"
 }
 
 ### Get a list of customers
@@ -20,7 +20,7 @@ GET http://localhost:5000/api/customers?page=2&limit=5
 
 
 ### Get a single customer by ID
-GET http://localhost:5000/api/customers/2
+GET http://localhost:5000/api/customers/1
 
 ### Update a customer
 PUT http://localhost:5000/api/customers/3
@@ -39,18 +39,18 @@ DELETE http://localhost:5000/api/customers/3
 
 // Address Routes
 ### Add a new address for a customer
-POST http://localhost:5000/api/customers/2/addresses
+POST http://localhost:5000/api/customers/1/addresses
 Content-Type: application/json
 
 {
-  "address_details": "648 Main Street, Flat 10",
-  "city": "Bangalore",
-  "state": "Karnataka",
-  "pin_code": "560001"
+  "address_details": "416 Main Road, Flat 3",
+  "city": "Kakinada",
+  "state": "Andhra Pradesh",
+  "pin_code": "533461"
 }
 
 ### Get all addresses for a customer
-GET http://localhost:5000/api/customers/2/addresses
+GET http://localhost:5000/api/customers/1/addresses
 
 ### Update an address by ID
 PUT http://localhost:5000/api/addresses/2
